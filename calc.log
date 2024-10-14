@@ -1,0 +1,5 @@
+2024-10-14 12:14:02 - DEBUG - Displaying available plugins
+2024-10-14 12:14:05 - ERROR - Invalid input provided.
+2024-10-14 12:14:09 - DEBUG - Operation 'add' executed with result: 5
+2024-10-14 12:14:13 - ERROR - Division by zero attempted.
+2024-10-14 12:14:15 - INFO - User exited the application.
