@@ -10,11 +10,11 @@ logger = logging.getLogger('calculator_app')
 class Command(ABC):
     @abstractmethod
     def execute(self, a, b):
-        pass
+        pass #TODO
 
     @abstractmethod
     def help(self):
-        pass
+        pass #TODO
 
 class PluginManager:
     def __init__(self):
@@ -38,8 +38,8 @@ class PluginManager:
                 # Use the module name as the command key
                 self.plugins[module_name] = command_instance
                 logger.info(f"Successfully loaded plugin: {module_name}")
-            except Exception as e:
-                logger.error(f"Failed to load command '{module_name}': {e}")
+            except Exception as e: #TODO
+                logger.error(f"Failed to load command '{module_name}': {e}") #TODO
 
     def list_command_modules(self, package):
         # Returns a list of command modules in the specified package
@@ -47,19 +47,19 @@ class PluginManager:
             command_modules = [name for _, name, _ in pkgutil.iter_modules([package.replace('.', os.sep)])]
             logger.debug(f"Found command modules: {command_modules}")
             return command_modules
-        except Exception as e:
-            logger.exception(f"Error listing command modules in package '{package}': {e}")
-            return []
+        except Exception as e: #TODO
+            logger.exception(f"Error listing command modules in package '{package}': {e}") #TODO
+            return [] #TODO
 
     def get_command(self, command_name):
         command = self.plugins.get(command_name)
         if command:
             logger.debug(f"Retrieved command: {command_name}")
         else:
-            logger.warning(f"Command not found: {command_name}")
+            logger.warning(f"Command not found: {command_name}") #TODO
         return command
 
-    def list_plugins(self):
-        plugin_keys = list(self.plugins.keys())
-        logger.debug(f"Listing loaded plugins: {plugin_keys}")
-        return plugin_keys
+    def list_plugins(self): 
+        plugin_keys = list(self.plugins.keys()) #TODO
+        logger.debug(f"Listing loaded plugins: {plugin_keys}") #TODO
+        return plugin_keys #TODO
