@@ -1,6 +1,6 @@
-### <h1 align=center>Homework 5</h1>
+### <h1 align=center>Homework 6</h1>
 ---
-<p align=center>This repository contains the dependencies and code for Homework 5 along with custom tests and newly added calculator functions</p>
+<p align=center>This repository contains the dependencies and code for Homework 6 along with custom tests and newly added calculator functions</p>
 
 <p align=center><b> On cloning the repository, please use</b></p>
 <div align=center>
@@ -28,7 +28,9 @@
 <li>Implements a menu command to list available command and usage example.</li>
 <li>Uses <b>Plugin architecture</b> to dynamically load new plugins.</li>
 <li>Uses <b>multiprocessing</b> capabilities to enable commands to run on separate cores.</li>
-<li><b>setuptools:</b> collection of enhancements to the Python distutils that allow developers to more easily build and distribute Python packages.</li>
+<li>Uses a <b>.env</b> file to set environment variables that are used for logging verbosity.</li>
+<li>Uses <b>logging</b> statements to trace the flow of the program and track application usage and security. This is the log file that is generated when the program is run <a href="https://github.com/dylandacosta8/is601_6/blob/main/calc.log"><b>Log File</b></a></li>
+<li>Uses <b>Github Action Workflows</b> to run pytests.</li>
 </ol>
 
 ---
@@ -42,6 +44,8 @@
 <li><b>Faker: </b>Faker is a Python package that generates fake data for you.</li>
 <li><b><a href='https://docs.python.org/3/library/concurrent.futures.html'>concurrent.futures:</a></b> a high-level interface for asynchronously executing callables.</li>
 <li><b>abc:</b> This module provides the infrastructure for defining abstract base classes (ABCs).</li>
+<li><b>setuptools:</b> collection of enhancements to the Python distutils that allow developers to more easily build and distribute Python packages.</li>
+<li><b>python-dotenv:</b> Used to load the environment variables from the .env file into the program.</li>
 </ol>
 
 ---
@@ -61,7 +65,7 @@
 <ol>
 <li>To run tests with fake data generated using Faker, use</li>
 
-`pytest --num_records=100 --cov --pylint`
+`pytest --num_records=100 --cov --pylint` <b>OR ---> </b> view at <a href="https://github.com/dylandacosta8/is601_6/actions"><b>GitHub Actions</b></a>.
 
 <li>To run the command line utility use one of the following command:</li>
 
